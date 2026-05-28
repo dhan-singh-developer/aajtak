@@ -1,0 +1,122 @@
+<style>
+
+nav.mobile{
+display:flex;
+position:fixed;
+bottom:0;
+width:100%;
+padding:.8rem 0;
+background:#035551;
+border-top:1px solid #000000;
+z-index:9999;
+margin:0 auto;
+}
+
+.mobile{
+transition:.0s ease!important;
+}
+
+nav.mobile ul{
+list-style:none;
+display:flex;
+justify-content:space-between;
+align-items:center;
+width:100%;
+margin:0;
+padding:0;
+}
+
+nav.mobile ul li{
+display:flex;
+flex-direction:column;
+align-items:center;
+font-size:.7rem;
+flex-grow:1;
+margin:0;
+position:relative;
+}
+
+nav.mobile ul li a{
+color:#ffffff;
+font-size:inherit;
+display:flex;
+flex-direction:column;
+align-items:center;
+text-decoration:none;
+position:relative;
+}
+
+/* SVG ICONS */
+
+nav.mobile ul li a svg{
+width:24px;
+height:24px;
+display:block;
+margin:0 auto;
+}
+
+/* REPORTER DESK ICON */
+
+.reporterIcon{
+filter:drop-shadow(0 0 5px rgba(255,0,0,.7));
+animation:newsGlow 1.2s infinite alternate;
+}
+
+/* GLOW EFFECT */
+
+@keyframes newsGlow{
+
+0%{
+transform:scale(1);
+filter:drop-shadow(0 0 3px rgba(255,0,0,.3));
+}
+
+100%{
+transform:scale(1.1);
+filter:drop-shadow(0 0 10px rgba(255,0,0,1));
+}
+
+}
+
+/* NEW LABEL */
+
+.newBadge{
+position:absolute;
+top:-8px;
+right:-2px;
+background:#ff0000;
+color:#fff;
+font-size:8px;
+font-weight:700;
+padding:2px 5px;
+border-radius:30px;
+line-height:1;
+letter-spacing:.5px;
+z-index:99;
+animation:newBlink .8s infinite;
+box-shadow:0 0 12px rgba(255,0,0,.95);
+}
+
+/* BLINK EFFECT */
+
+@keyframes newBlink{
+
+0%{
+opacity:1;
+transform:scale(1);
+}
+
+50%{
+opacity:.2;
+transform:scale(1.15);
+}
+
+100%{
+opacity:1;
+transform:scale(1);
+}
+
+}
+
+</style>
+ 
