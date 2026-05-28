@@ -1,38 +1,33 @@
+/* =========================
+PREMIUM MOBILE + DESKTOP NAVBAR
+========================= */
+
 nav.mobile{
 display:flex;
 position:fixed;
 bottom:0;
 left:0;
 width:100%;
-padding:.8rem 0;
-background:#035551;
-border-top:1px solid #000000;
+padding:1rem 0;
+background:linear-gradient(180deg,#035551,#023c39);
+border-top:1px solid rgba(255,255,255,.08);
 z-index:999999;
 margin:0 auto;
-box-shadow:0 -2px 20px rgba(0,0,0,.35);
-backdrop-filter:blur(8px);
--webkit-backdrop-filter:blur(8px);
+box-shadow:
+0 -3px 25px rgba(0,0,0,.45),
+0 0 35px rgba(0,0,0,.18);
+backdrop-filter:blur(14px);
+-webkit-backdrop-filter:blur(14px);
+min-height:88px;
 }
 
-/* DESKTOP FLOATING EFFECT */
-
-@media(min-width:768px){
-
-nav.mobile{
-max-width:700px;
-left:50%;
-transform:translateX(-50%);
-border-radius:18px 18px 0 0;
-bottom:0;
-}
-
-}
-
-/* NAV MAIN */
+/* MAIN */
 
 .mobile{
 transition:.0s ease!important;
 }
+
+/* UL */
 
 nav.mobile ul{
 list-style:none;
@@ -40,15 +35,18 @@ display:flex;
 justify-content:space-between;
 align-items:center;
 width:100%;
-margin:0;
+margin:0 auto;
 padding:0;
+max-width:1200px;
 }
+
+/* LI */
 
 nav.mobile ul li{
 display:flex;
 flex-direction:column;
 align-items:center;
-font-size:.7rem;
+font-size:.72rem;
 flex-grow:1;
 margin:0;
 position:relative;
@@ -65,53 +63,54 @@ align-items:center;
 justify-content:center;
 text-decoration:none;
 position:relative;
-gap:4px;
+gap:5px;
 font-weight:600;
+letter-spacing:.2px;
 }
 
 /* SVG ICONS */
 
 nav.mobile ul li a svg{
-width:24px;
-height:24px;
+width:26px;
+height:26px;
 display:block;
 margin:0 auto;
 fill:currentColor;
 color:#fff;
+transition:.3s ease;
 }
 
-/* ICON HOVER */
+/* HOVER EFFECT */
 
 nav.mobile ul li a:hover svg{
 transform:translateY(-2px) scale(1.08);
-transition:.3s ease;
 }
 
 /* CENTER LOGO */
 
 nav.mobile ul li:nth-child(3){
-transform:translateY(-10px);
+transform:translateY(-12px);
 }
 
 nav.mobile ul li:nth-child(3) svg{
-width:54px;
-height:54px;
+width:62px;
+height:62px;
 border-radius:50%;
-padding:5px;
+padding:6px;
 background:#035551;
 box-shadow:
-0 0 10px rgba(255,153,0,.6),
-0 0 25px rgba(255,153,0,.25);
+0 0 12px rgba(255,153,0,.65),
+0 0 28px rgba(255,153,0,.28);
 }
 
-/* REPORTER DESK ICON */
+/* REPORTER ICON */
 
 .reporterIcon{
 filter:drop-shadow(0 0 5px rgba(255,0,0,.7));
 animation:newsGlow 1.2s infinite alternate;
 }
 
-/* GLOW EFFECT */
+/* GLOW */
 
 @keyframes newsGlow{
 
@@ -122,7 +121,7 @@ filter:drop-shadow(0 0 3px rgba(255,0,0,.3));
 
 100%{
 transform:scale(1.1);
-filter:drop-shadow(0 0 10px rgba(255,0,0,1));
+filter:drop-shadow(0 0 12px rgba(255,0,0,1));
 }
 
 }
@@ -131,22 +130,22 @@ filter:drop-shadow(0 0 10px rgba(255,0,0,1));
 
 .newBadge{
 position:absolute;
-top:-8px;
-right:-2px;
+top:-10px;
+right:-5px;
 background:#ff0000;
 color:#fff;
 font-size:8px;
 font-weight:700;
-padding:2px 5px;
+padding:2px 6px;
 border-radius:30px;
 line-height:1;
 letter-spacing:.5px;
 z-index:99;
 animation:newBlink .8s infinite;
-box-shadow:0 0 12px rgba(255,0,0,.95);
+box-shadow:0 0 14px rgba(255,0,0,.95);
 }
 
-/* BLINK EFFECT */
+/* BLINK */
 
 @keyframes newBlink{
 
@@ -167,22 +166,58 @@ transform:scale(1);
 
 }
 
-/* MOBILE OPTIMIZATION */
+/* TEXT */
+
+nav.mobile ul li a span{
+font-size:12px;
+font-weight:600;
+}
+
+/* MOBILE */
 
 @media(max-width:480px){
 
+nav.mobile{
+padding:.9rem 0;
+min-height:82px;
+}
+
 nav.mobile ul li{
-font-size:.62rem;
+font-size:.65rem;
 }
 
 nav.mobile ul li a svg{
-width:22px;
-height:22px;
+width:23px;
+height:23px;
 }
 
 nav.mobile ul li:nth-child(3) svg{
-width:50px;
-height:50px;
+width:54px;
+height:54px;
+}
+
+nav.mobile ul li a span{
+font-size:10px;
+}
+
+}
+
+/* DESKTOP */
+
+@media(min-width:768px){
+
+nav.mobile{
+width:100%;
+left:0;
+transform:none;
+border-radius:0;
+bottom:0;
+padding:1rem 0;
+}
+
+nav.mobile ul{
+max-width:1200px;
+margin:0 auto;
 }
 
 }
@@ -190,5 +225,5 @@ height:50px;
 /* BODY SPACE */
 
 body{
-padding-bottom:90px!important;
+padding-bottom:145px!important;
 }
